@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
 html,
 body {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 a {
@@ -13,4 +26,157 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.mainTitle{
+  color: white;
+  margin-left: 10vw;
+  margin-top: 7.5vmax;
+  font-size: 4vmax;
+  margin-right: 10vw;
+}
+
+.subTitle{
+  margin-left: 10vw;
+  margin-top: -1.5vmax;
+  font-size: 1.9vmax;
+  color: #de9ee0;
+}
+
+.typing {
+  font-weight: 700;
+  margin: 0.4em 0;
+  margin-left: 10vw;
+}
+.typing { font-size: 3.5em; }
+.typing {
+  color: gold;
+  font-size: 2vmax;
+}
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.gradient {
+  background-color: #300c69;
+  height: 6vmax;
+}
+
+/*social buttons css------------------------------------------------------------*/
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-top: 1vw;
+  margin-left: 9.13vw;
+}
+.social-buttons__button {
+  margin: 10px 5px 0;
+}
+.social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 8vmin;
+  height: 8vmin;
+  text-decoration: none;
+}
+.social-button__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+.social-button i, .social-button svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social-button i {
+  font-size: 28px;
+}
+.social-button svg {
+  height: 40%;
+  width: 40%;
+}
+.social-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.social-button:focus, .social-button:hover {
+  color: #fff;
+}
+.social-button:focus::after, .social-button:hover::after {
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+}
+.social-button--github {
+  color: black;
+}
+.social-button--github::after {
+  background: black;
+}
+.social-button--discord {
+  color: rgb(114, 137, 218);
+}
+.social-button--discord::after {
+  background: rgb(114, 137, 218);
+}
+.social-button--instagram {
+  color: rgb(193,53,132);
+}
+.social-button--instagram::after {
+  background: rgb(193,53,132);
+}
+.social-button--youtube {
+  color: #c12127;
+}
+.social-button--youtube::after {
+  background: #c12127;
+}
+.journey{
+  background-color:rgba(256, 256, 256, 0.5);
+  height: 25vmax;
+  margin-top: 5vw;
+  margin-left: 5vmax;
+  margin-right: 5vmax;
+}
+.rainbow_text_animated {
+  background: linear-gradient(to right, #66ff99, #0099ff , #FFD700, #ffffff, #f034c1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
 }
